@@ -69,6 +69,7 @@ Abram dois livros pelo catálogo, comparem os dados e testem o retorno. Confiram
 
 ## Sprint 2 — Adicionar e visualizar o carrinho
 
+
 ### Pessoa 1 — Adicionar e salvar
 
 **Arquivo:** `js/product.js`.
