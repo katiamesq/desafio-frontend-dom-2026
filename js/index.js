@@ -9,14 +9,29 @@ function renderizarCatalogo() {
   lista.innerHTML = "";
 
   for (const livro of dados.livros) {
-    const card = document.createElement("div");
+    const card = document.createElement("article");
+
+    card.classList.add("book-card");
 
     card.innerHTML = `
-      <a href="./product.html?id=${livro.id}">
-        <h2>${livro.titulo}</h2>
-        <p>${livro.autor}</p>
-        <p>${formatarPreco(livro.preco)}</p>
-      </a>
+      <div class="book-cover book-cover--${livro.cor}">
+        <h3>${livro.titulo}</h3>
+        <small>${livro.autor}</small>
+        <b>p.42</b>
+      </div>
+
+      <div class="book-card__details">
+        <h3>${livro.titulo}</h3>
+        <span>${livro.autor}</span>
+
+        <div>
+          <strong>${formatarPreco(livro.preco)}</strong>
+
+          <a href="./product.html?id=${livro.id}">
+            Ver detalhes
+          </a>
+        </div>
+      </div>
     `;
 
     lista.appendChild(card);
@@ -24,5 +39,3 @@ function renderizarCatalogo() {
 }
 
 renderizarCatalogo();
-
-
