@@ -8,24 +8,24 @@
 
 
 
-//const botaoAdicionar = document.querySelector(".book-detail__add");
+const botaoAdicionar = document.querySelector(".book-detail__add");
 
-//botaoAdicionar.addEventListener("click", function () {
-   // const itemExistente = carrinho.find(function (item) {
-        //return item.id === livroSelecionado.id;
-   // });
+botaoAdicionar.addEventListener("click", function () {
+   const itemExistente = carrinho.find(function (item) {
+        return item.id === livroSelecionado.id;
+    });
 
-   // if (itemExistente) {
-     //   itemExistente.quantidade += 1;
-    //} else {
-      //  carrinho.push({
-        //    id: livroSelecionado.id,
-          //  quantidade: 1
-        //});
-    //}
+   if (itemExistente) {
+     itemExistente.quantidade += 1;
+    } else {
+      carrinho.push({
+        id: livroSelecionado.id,
+          quantidade: 1
+        });
+    }
 
-   // salvarCarrinho();
+   salvarCarrinho();
 
-    //renderizarCarrinho();
-    //abrirCarrinho();
-//});
+    renderizarCarrinho();
+    abrirCarrinho();
+});
